@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+  *{margin:0;padding:0;}
+  div{
+  font-size:60px;
+  font-family:'黑体';
+  font-weight:bold;
+  
+  }
+ </style>
+ </head>
+
+ <body>
+ <h2>可以暂停的时钟</h2>
+   <div class="digitalClock">16:28:05</div>
+   <button onclick="start()">启动时钟</button>
+   <button onclick="pause()">暂停时钟</button>
+   <br/>
+   <br/>
+   <br/>
+   <script>
+   function stopTime(){
+         var timer=new Date();
+		 var h=timer.getHours();
+		 var m=timer.getMinutes();
+		 var s=timer.getSeconds();
+		 document.getElementsByClassName('digitalClock')[0].innerHTML=h+':'+m+':'+s;
+   }
+   stopTime()
+   var time1=null;
+   function start(){
+       time1=setInterval(stopTime,1000)
+   }
+   function pause(){
+	   if (time1)
+	   {
+      clearInterval(time1);
+	   }else{
+		    alert('请先启动')
+			}
+   
+   }
+   </script>
+   <div class="millisecondClock">00:00.000</div>
+   <button onclick="startrun()">开始计时</button>
+   <button onclick="stoprun()">停止计时</button>
+   <br/>
+   <br/>
+   <br/>
+   <script>
+   var timer=null;
+    var counter=0;   //毫秒计数器
+	function drawTimer(){
+		counter+=1;
+	var millis=counter%1000;
+	millis=millis<10?'00'+millis:
+	  (millis<100?'0'+millis:millis);
+	var s=parseInt(counter/1000);
+	   s=s<10?'0'+s:s;
+	var m=parseInt(counter/60000);
+	   m=m<10?'0'+m:m;
+	   document.getElementsByClassName('millisecondClock')[0].innerHTML=m+':'+s+':'+millis;
+	}
+	//drawTimer()
+	function startrun(){
+    timer2=setInterval(drawTimer,1);
+	}
+	function stoprun(){
+	  timer3=clearInterval(timer2);
+	}
+   </script>
+ </body>
+</html>

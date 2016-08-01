@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style type="text/css">
+  *{margin:0;padding:0;}
+ 
+ </style>
+ </head>
+
+ <body>
+ <script>
+ var fbb={'姓名':'范冰冰','数学':'90','语文':'61','英语':'95'};
+ /*
+ fbb['姓名']='范冰冰';
+ fbb['数学']=90;
+ fbb['语文']=61;
+ fbb['英语']=95;
+ */
+ for (var key in fbb){
+	 document.write(key+':'+fbb[key]+'<br/>');
+ }
+ 
+ </script>
+ <script>
+ var chars=['H','e','l','l','o'];
+ var str=chars.join('');
+ document.write('<br>'+str);
+ </script>
+ </body>
+</html>

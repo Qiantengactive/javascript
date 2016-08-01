@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+  *{margin:0;padding:0;}
+  .aphoto{
+   padding:10px 0 10px 10px;
+  }
+ </style>
+ <script>
+   function addPhoto(){
+	 var newinput1=document.createElement('input');
+	    newinput1.setAttribute('type','file');
+	    newinput1.setAttribute('name','myphoto');
+	
+	 var newinput2=document.createElement('input');
+	    newinput2.setAttribute('type','button');
+	    newinput2.setAttribute('value','删除');
+
+     var newdiv=document.createElement('div');
+	    newdiv.setAttribute('class','aphoto');
+
+	 newdiv.appendChild(newinput1);
+	 newdiv.appendChild(newinput2);
+	 document.getElementById('photoContainer').appendChild(newdiv);
+   }
+  
+ </script>
+ </head>
+
+ <body>
+   <button onclick="addPhoto()">添加更多</button>
+   <div id="photoContainer">
+     <div class="aphoto">
+        <input type="file" name="myphoto"/><input type="button" value="删除"/>
+     </div>
+   </div>
+ </body>
+</html>

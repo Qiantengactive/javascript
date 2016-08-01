@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+  *{margin:0;padding:0;}
+.fei{
+  width:100px;
+  height:50px;
+  border:1px solid gray;
+  float:left;
+  cursor:pointer;
+  }
+#xiao1{
+background-color:#FFCC00;
+}
+#xiao2{
+background-color:#AF0091;
+}
+#xiao3{
+background-color:#00A5CE;
+}
+
+.fei2{
+  width:400px;
+  height:200px;
+  border:1px solid gray;
+  position:absolute;
+  }
+#z4{
+position:relative;
+}
+#a1{
+background-color:#FFCC00;
+top:50px;
+left:0px;
+z-index:2;
+}
+#a2{
+background-color:#AF0091;
+top:50px;
+left:0px;
+z-index:1;
+}
+#a3{
+background-color:#00A5CE;
+top:50px;
+left:0px;
+z-index:1;
+}
+ </style>
+ <script>
+function change2(){
+ var a1=document.getElementById('a1');
+ var b1=a1.getAttibutes('z-index');
+ var a2=document.getElementById('a2');
+ var b2=a1.getAttibutes('z-index');
+ var a3=document.getElementById('a3');
+ var bb=a1.getAttibutes('z-index');
+if (b2!==2)
+ {
+  b1.setAttribute(z-index,2);
+  b2.setAttribute(z-index,1);
+  b3.setAttribute(z-index,1);
+ }
+}
+ function change2(){
+ var a1=document.getElementById('a1');
+ var b1=a1.getAttibutes('z-index');
+ var a2=document.getElementById('a2');
+ var b2=a1.getAttibutes('z-index');
+ var a3=document.getElementById('a3');
+ var bb=a1.getAttibutes('z-index');
+if (b2!==2)
+ {
+  b1.setAttribute(z-index,1);
+  b2.setAttribute(z-index,2);
+  b3.setAttribute(z-index,1);
+ }
+ }
+ function change3(){
+ var a1=document.getElementById('a1');
+ var b1=a1.getAttibutes('z-index');
+ var a2=document.getElementById('a2');
+ var b2=a1.getAttibutes('z-index');
+ var a3=document.getElementById('a3');
+ var bb=a1.getAttibutes('z-index');
+if (b3!==2){
+  b1.setAttribute(z-index,1);
+  b2.setAttribute(z-index,1);
+  b3.setAttribute(z-index,2);
+         }
+ }
+ </script>
+ </head>
+
+ <body>
+  <div id="main">
+    <div id="xiao1" class="fei"  onclick="change1()">10元套餐</div>
+    <div id="xiao2" class="fei"  onclick="change2()">30元套餐</div>
+    <div id="xiao3" class="fei"  onclick="change3()">50元套餐</div>
+    <div id="z4">
+	  <div id="a1" class="fei2">10元套餐详情，</br>  每月套餐内拨打100分钟，超出部分2毛、分种</div>
+	  <div id="a2" class="fei2">30元套餐详情，</br>  每月套餐内拨打100分钟，超出部分2毛、分钟</div>
+	  <div id="a3" class="fei2">50元套餐详情，</br>  每月套餐内拨打100分钟，超出部分2毛、分钟</div>
+	</div>
+  </div>
+ </body>
+</html>

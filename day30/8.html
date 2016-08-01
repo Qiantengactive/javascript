@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+ </style>
+ </head>
+   <!--body开始了-->
+ <body>
+ </body>
+ <script>
+ console.log("nodeType"+"\t"+"nodeName"+"\t"+"nodeValue");
+
+ var node0=document;                //#document
+ console.log(node0);
+ console.log(node0.nodeType+"\t\t"+node0.nodeName+"\t\t"+node0.nodeValue);
+
+ var node1=document.firstChild;   //doctype
+ console.log(node1);
+ console.log(node1.nodeType+"\t\t"+node1.nodeName+"\t\t"+node1.nodeValue);
+
+ var node2=node1.nextSibling //html
+ console.log(node2)
+ console.log(node2.nodeType+"\t\t"+node2.nodeName+"\t\t"+node2.nodeValue);
+
+ var node3=node2.attributes[0];  //xmlns
+ console.log(node3)
+ console.log(node3.nodeType+"\t\t"+node3.nodeName+"\t\t"+node3.nodeValue);
+
+ var node4=node2.firstChild;   //head
+ console.log(node4)
+ console.log(node4.nodeType+"\t\t"+node4.nodeName+"\t\t"+node4.nodeValue);
+
+ var node5=node4.nextSibling; //comment
+ console.log(node5.nodeType+"\t\t"+node5.nodeName+"\t\t"+node5.nodeValue);
+ 
+ </script> 
+</html>

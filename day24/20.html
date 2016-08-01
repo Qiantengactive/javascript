@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style type="text/css">
+  *{margin:0;padding:0;}
+ 
+ </style>
+ </head>
+
+ <body>
+ <script>
+  var input;
+  var emps=[];
+  while(input!='exit'){
+	  input=prompt('输入员工姓名');
+	  if (input!='exit'){
+		  emps[emps.length]=input;   //添加新数值
+	  }else{
+	     break;
+	  }
+     document.write(emps);
+  }
+  <script>
+  //赋值同时，用表达式的值做判断！
+  while ((input=prompt('输入员工姓名'))！='exit'){
+	  emps[emps.length]=input;
+  }
+  document.write(emps);
+  </script>
+ </script>
+ </body>
+</html>

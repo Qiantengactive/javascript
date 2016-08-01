@@ -1,0 +1,11 @@
+var num=12345.6789;
+var ne=num.toString(2);
+console.log(ne);
+var ne=num.toString(8);
+console.log(ne);
+var ne=num.toString(16);
+console.log(ne);
+var ne=num.toExponential(3);
+console.log(ne);
+var ne=num.toFixed(3);
+console.log(ne);

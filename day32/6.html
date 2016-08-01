@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+  *{margin:0;padding:0;}
+ </style>
+ </head>
+
+ <body>
+    <button onclick="closeWin()">关闭窗口</button>
+	<br/>
+	<input type="checkbook"/>我同意本站的使用条款<a href="javascript: void(0);" onclick="openWin()" target="siteagreenment">使用条款</a>
+
+  <script>
+  function openWin(){
+     //console.log(123)
+	 //return 'abc';
+	 open(
+	 '6_1.html',
+	 'siteagreenment',
+	 //'channelmode=yes'
+	 'directories=yes'
+	 );
+  }
+   //var input=window.prompt('请输入年龄','20');
+   //return input;
+   //console.log(input)
+   function closeWin(){
+     window.close();
+   }
+  </script>
+ </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>冒泡排序</title>
+ <style type="text/css">
+  *{margin:0;padding:0;}
+ 
+ </style>
+ </head>
+ <body>
+ <script>
+ //第一次比较
+  var arr=[5,3,2,6,4,9,8,7];
+  for(var i=0;i<arr.length-1;i++)
+  {
+      var curr=arr[i];
+      var next=arr[i+1];
+      if (curr>next){
+		  var box=arr[i];
+          arr[i]=arr[i+1];
+          arr[i+1]=box;
+          }
+  }
+  //第二次比较
+  //查找剩余元素的最大值
+  /*for(var i=0;i<arr.length-2;i++)
+  {
+      var curr=arr[i];
+      var next=arr[i+1];
+      if (curr>next){
+		  var box=arr[i];
+          arr[i]=arr[i+1];
+          arr[i+1]=box;
+          }
+  }
+  */
+  //第三次比较
+  for (var i=0;i<arr.lrngth-3;i++ )
+  {  var curr=arr[i];
+      var next=arr[i+1];
+      if (curr>next){
+		  var box=arr[i];
+          arr[i]=arr[i+1];
+          arr[i+1]=box;
+          }
+  }
+  //第n次比较 length-1次比较，最后剩一个元素时不比较
+ /* for (var i=0;i<arr.length-n;i++)
+  {  {
+        var curr=arr[i];
+        var next=arr[i+1];
+          if (curr>next){
+		  var box=arr[i];
+          arr[i]=arr[i+1];
+          arr[i+1]=box;
+          }
+  }*/
+  for (var n=1;n<arr.length-1;n++)
+  {
+	   for(var i=0;i<arr.length-n;i++)
+        {
+        var curr=arr[i];
+        var next=arr[i+1];
+          if (curr>next){
+		  var box=arr[i];
+          arr[i]=arr[i+1];
+          arr[i+1]=box;
+          }
+      }
+  }
+  document.write("<br>"+arr);
+  </script>
+  <script>
+  var arr3=['h','e','l','l','o'];
+  //var str=arr3.join('');
+  document.write('<br>'+arr3.join(''));
+  </script>
+  <script>
+  var arr1=[1,2,3];
+  var arr2=[12,23,123,31];
+  var newArry=arr1.concat(arr2);//将arr2拆散，拼接到arr1后
+  //1,2,3,12,23,123,31
+  document.write('<br>'+newArry);
+  var subArr=newArry.slice(2,4+1);
+  //正数第2个到，到正数第4个
+  document.write('<br>'+subArr);
+  //倒数第2个到，到倒数第4个
+  var subArr2=newArry.slice(newArry.length-4,newArry.length-2);
+  var subArr2=newArry.slice(-4,-2);
+  //倒数第四个，倒数第二个
+  //上面的两种写法都可以
+  document.write('<br>'+subArr2);
+  </script>
+ </body>
+</html>

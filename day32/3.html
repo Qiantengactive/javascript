@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+  *{margin:0;padding:0;}
+ </style>
+ </head>
+
+ <body>
+  <h2>省市级别下拉</h2>
+  <select id="provinces" onchange='changeCity(this.value)'>
+    <option value="-1">--请选泽--</option>
+  </select>
+  <select id="citys">
+    <option value="-1">--请选泽--</option>
+  </select>
+  <script>
+    var ps=['北京','天津','河北'];
+	var cs=[
+	        ['东城区','西城区'],
+			['河东区','和平区'],
+			['廊坊市','石家庄市','唐山市']
+	       ];
+		   var fragment=document.createDocumentFragment();
+		   for (var i=0;i<ps.length;i++)
+		   {
+			   var option=document.createElement('option');
+			   option.setAttribute('value',i);
+		       option.innerHTML=ps[i];
+			   fragment.appendChild(option);
+		   }
+		   document.getElementById('provinces').appendChild(fragment);
+
+		   function changeCity(pon){  
+			  //删除已有的下拉框
+		     var cSelect=document.getElementById('citys');
+			 while(cSelect.children.length>1){
+			         cSelect.removeChild(cSelect.lastElementChild);
+			      };
+		/*cSelect.innerHTML="";*/
+
+			  /*点击显示*/
+			  //创建大片段 
+		      var fragment2=document.createDocumentFragment();
+			  for (var i=0;i<cs[pon].length;i++)
+			  {    
+			         //创建option 
+			         var option2=document.createElement('option');
+					 option2.innerHTML=cs[pon][i];
+			         //给option 扔入value
+			         //setAttribute('value',i);
+			         fragment2.appendChild(option2);
+			  }
+		              document.getElementById('citys').appendChild(fragment2);
+		    
+		   }
+  </script>
+ </body>
+</html>

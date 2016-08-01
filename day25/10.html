@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  
+ </head>
+
+ <body>
+  <script>
+  var arr3=new Array();
+  arr3[0]=new Array(101,'Tom','2015-5-10');
+  arr3[1]=new Array(102,'Mary','2010-6-28');
+  arr3[2]=new Array(103,'King','2010-8-13');
+  document.write('<table border='1'>');
+  function
+  document.write('</table>');
+  
+  
+  
+  </script>
+  <table border="1" width="500px">
+     <thead>
+	     <tr>
+		     <th>编号</th>
+		     <th>姓名</th>
+		     <th>生日</th>
+		 </tr>
+	 </thead>
+	 <tbody>
+	   <script>
+	     var data=[];
+		 data.push([101,'Tom','2010-5-5']);
+		 data.push([102,'Mary','2013-5-25']);
+	     data.push([102,'John','2014-3-5']);
+		 console.log(data);
+		 for (var i=0;i<data.length;i++)
+		 {
+			 document.write('<tr>');
+             for (var j=0;j<data[i].length;j++)
+             {
+				 document.write('<td>'+data[i][j]+'</td>');
+             }
+			 document.write('</tr>');
+		 }
+	   </script>
+	 </tbody>
+  </table>
+ </body>
+</html>

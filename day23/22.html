@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style type="text/css">
+  *{margin:0;padding:0;}
+ 
+ </style>
+ </head>
+
+ <body>
+ <script>
+   var num=parseInt(Math.random()*10);
+   console.log(num);
+   do{ 
+   var input;
+	   input=window.prompt('请您输入一个随机数');
+       if(input>num){
+	       console.log('猜大了');
+		   break;
+		  }else if(input<num)
+		  {console.log('猜小了');
+		   break;
+		  }else{
+		    console.log('您猜对了');
+		   break;
+		  }
+	 }
+	 while (input!=num);
+ </script>
+ </body>
+</html>

@@ -1,0 +1,51 @@
+<html> 
+<head>
+</head>
+<body>
+     <script>
+       var num1=10;
+       var num2=1;
+       var flag1=true;
+	   var str1='abc';
+	   function add() {
+	       console.log(num1+num2);     // 11.5
+	       console.log(num1+flag1);     // 11
+	       console.log(num1+str1);     //  10abc
+	       console.log(flag1+str1);     //  trueabc
+	   }
+	   function substract() {
+	       console.log(num1-num2);     // 8.5
+	       console.log(num1-flag1);     // 9
+	       console.log(num1-str1);     //  Nan
+	       console.log(flag1-str1);     //  Nan
+	   }
+	   function multiply() {
+	       console.log(num1*num2);     // 15
+	       console.log(num1*flag1);     // 10
+	       console.log(num1*str1);     //  Nan
+	       console.log(flag1*str1);     //  Nan
+	   }
+	   function mod() {
+	       console.log(num1%num2);     // 1
+	       console.log(num1%flag1);     // 0
+	       console.log(num1%str1);     //  Nan
+	       console.log(flag1%str1);     //  Nan
+	   }
+	   function divide() {
+	       console.log(num1/num2);     // 10
+	       console.log(num1/flag1);     // 10
+	       console.log(num1/str1);     //  Nan
+	       console.log(flag1/str1);     //  Nan
+	   }
+
+	 
+	 </script>
+     <button onclick="add () ">+</button>
+     <button onclick="substract()">-</button>
+     <button onclick="multiply()">*</button>
+     <button onclick="divide()">/</button>
+     <button onclick="mod()">%</button>
+     <button onclick="">++</button>
+     <button onclick="">--</button>
+</body>
+</html>

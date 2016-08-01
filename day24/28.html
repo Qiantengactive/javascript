@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style type="text/css">
+  *{margin:0;padding:0;}
+ 
+ </style>
+ </head>
+
+ <body>
+ <script>
+ var arr=[1,2,13,23,123,31,3];
+ document.write(arr+'<br/>');
+ function compareASC(a,b){
+   return a-b;
+ }
+ function compareDESC(a,b){
+   return -(a-b);
+ }
+ arr.sort(compareDESC);  //方法也是对象 ，可作为变量参数传递 不加圆括号 ，名字当变量传递
+ document.write(arr+'<br/>');
+ var a=2;
+ var b=123;
+ var r=compareASC(a,b);
+ if (r>0)
+ {document.write(a+'大于'+b);
+ }else if (r<0)
+ {document.write(a+'小于'+b);
+ }else
+ {document.write(a+'等于'+b)
+ }
+
+ </script>
+
+
+ </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+  *{margin:0;padding:0;}
+ </style>
+ </head>
+
+ <body>
+  <h2>登陆成功</h2>
+  <h3>欢迎回来，<span>3</span>秒钟后将自动跳转到首页。。。</h3>
+  <script>
+	var counter=3;
+	var cl=null;
+    function jump(){
+	//修改页面显示的url-即页面跳转
+	if (counter>=0){
+	     var num1=document.getElementsByTagName('span')[0].innerHTML=counter;
+	     counter=counter-1;
+	   }else{
+		   clearInterval(cl);
+	     window.location.href='1.html';
+	   
+	   }
+	
+	}
+	cl=setInterval(jump,1000);
+    //setTimeout(jump,3000);
+  </script>
+ </body>
+</html>

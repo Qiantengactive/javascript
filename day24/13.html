@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style type="text/css">
+  *{margin:0;padding:0;}
+ 
+ </style>
+ </head>
+
+ <body>
+  <script>
+  var week= ["日"，"一","二","三","四","五","六"];
+  //栈中创建一个变量空间：名为week;
+  //堆中创建一个大存储空间：地址可能是0x0901
+  //栈中变量中存储的是地址0x0901
+  //堆空间中存储的是实际数据
+  //week变量”引用了“堆中的一个数组对象
+  //alert(week);
+  document.write(week+"<br>");
+  var day=week;//值传递：将内部数值复制给新变量
+  week= ["SUN"，"MON","TUS","WEB","THU","FRI","SAT"];
+   //新创建一个数组对象
+   //将新对象地址保存到原week变量中替换旧地址
+   //旧数据对象释放，等待垃圾回收
+   //week变量”引用了“新数组对象
+  console.log(week);
+  </script>
+ </body>
+</html>

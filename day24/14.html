@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style type="text/css">
+  *{margin:0;padding:0;}
+ 
+ </style>
+ </head>
+  <body>
+  <script>
+  //['key1':value1,'key2':value2,....]
+  var fbb=[];
+  fbb['姓名']='范冰冰';
+  fbb['数学']=90;
+
+  fbb['英语']=95;
+  fbb['语文']=61;
+  fbb['英语']=94;
+  //var fbb={'姓名':'范冰冰','数学':90,'英语':95,'语文':61};
+  for (var key in fbb){
+	  document.write(key+':'+fbb[key]+'<br>');
+  }
+  </script>
+ 
+ </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+  *{margin:0;padding:0;}
+ </style>
+ </head>
+
+ <body>
+  <h2>一次性定时器</h2>
+  <button>停止</button>
+  <script>
+    var i=99;
+	//3秒钟后打印一遍i的值
+	//task:打印i的值
+	//time:3000
+	function printValue(){
+	   document.write(i);
+	 var time2=window.setTimeout(printValue,3000);
+	}
+	window.setTimeout(printValue,3000);
+	function stopTime(){
+	    document.clearTimeout(time2);
+	}
+  </script>
+ </body>
+</html>

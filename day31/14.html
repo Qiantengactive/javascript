@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+  *{margin:0;padding:0;}
+ </style>
+ </head>
+
+ <body>
+  <span class="header">遍历元素数</span>
+  <div>一个<span>区</span>块</div>
+ </body>
+ <script>
+  console.log('nodeType\tnodeName\tnodeValue')
+ var node0=document;
+    console.log(node0.nodeType+'\t\t\t'+node0.nodeName+'\t\t'+node0.nodeValue);
+     console.log(node0);     //document
+ var node1=node0.firstElementChild;   
+    console.log(node1.nodeType+'\t\t\t'+node1.nodeName+'\t\t'+node1.nodeValue);
+    console.log(node1);   //html
+ var node2=node1.firstElementChild;
+    console.log(node2.nodeType+'\t\t\t'+node2.nodeName+'\t\t\t'+node2.nodeValue);
+    console.log(node2);   //head
+ var node3=node2.nextElementSibling;
+ console.log(node3.nodeType+'\t\tt'+node3.nodeName+'\t\t\t'+node3.nodeValue);
+ console.log(node3);   //tbody
+ var node4=node3.firstElementChild;
+
+console.log(node1===document.documentElement);
+console.log(node3===document.body);
+var html1=document.documentElement;
+var head1=html1.firstChild;
+console.log(head1);
+//var head2=html1.ChildNodes[0];
+//console.log(head2);
+ </script>
+</html>

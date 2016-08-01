@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style type="text/css">
+  *{margin:0;padding:0;}
+ 
+ </style>
+ </head>
+
+ <body>
+ <script>
+  var arr=[1,2,13,23,123,31,3];
+ //
+ var compare;
+ var compare=new Function('a','b','return a-b')//在堆中开辟空间
+ document.write(arr+'<br/>');
+ arr.sort(compare);
+ document.write(arr+'<br/>');
+ //任意两个数比较
+ /*function compare(a,b){
+  return a-b; 
+ }
+ */
+ var a=23;
+ var b=100;
+ var r=compare(a,b);
+ if (r>0)
+ {document.write(a+'大于'+b);
+ }else if (r<0)
+ {document.write(a+'小于'+b);
+ }else
+ {document.write(a+'等于'+b)
+ }
+ 
+ </script>
+ </body>
+</html>

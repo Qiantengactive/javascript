@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style type="text/css">
+  *{margin:0;padding:0;}
+ 
+ </style>
+ </head>
+
+ <body>
+ <script>
+/*对任意数组执行冒泡排序*/
+function compare(a,b){
+ return a-b;
+}
+function bubbleSort(arr){
+for (var n=1;n<=arr.length-1;n++ )
+{
+   for (var i=0;i<arr.length-n;i++ ){
+	 if (compare(arr[i],arr[i+1])>0){
+           var box=arr[i];
+		   arr[i]=arr[i+1];
+		   arr[i+1]=box;
+		}
+    }
+  }
+  //return?
+}
+var arr=[5,7,3,2,6,8,4,9];
+document.write(arr+'<br/>');
+bubbleSort(arr);
+document.write(arr+'<br/>');
+//function 函数改变了堆中的数组 所以第二个document输出原来的数组时（此时原数组已经改变）肯定变了 和返回不返回没有关系
+function fun(num){
+  num=num-3;
+  document.write(num+"<br/>"); //7
+}
+var num=10;
+fun(num);
+  document.write(num);       //10
+//function 程序没有对象 值放在环境栈中，和堆没有关系 m没有返回值所以不用返回 直接就是原来的数字
+ </script>
+ 
+ </body>
+</html>

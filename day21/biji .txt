@@ -1,0 +1,6 @@
+<script type="text/javascript">
+  console.log('hello world');
+  console.log('hello'); //在控制台中输出 
+  document.write(123); //在HTML文档中输出
+
+ </script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>  </title>
+ <style>
+  *{margin:0;padding:0;}
+body{
+  font-size:10px;
+  }
+ #a1,#a3{
+ width:80px;
+ height:100px;
+ border:1px solid gray;
+ background:yellow;
+ float:left;
+ line-height:100px;
+ }
+#a2{
+ line-height:100px;
+ text-align:center;
+ height:100px;
+ width:20px;
+ border:1px solid gray;
+ background:#FCCB00;
+ float:left;
+ cursor:pointer;
+}
+ </style>
+ <script>
+ function reading(){
+ var p=document.getElementById("msg");
+ //p.innerText="读取中，请稍等";
+ p.textContent="读取中，请稍等";
+ }
+ function change(){
+ //var p1=document.getElementById("a1").style.display="none";
+ var p1=document.getElementById("a1");
+ var p2=document.getElementById("a2");
+ if (p2.innerHTML=="&gt;&gt;"){
+	  p2.innerHTML="&lt;&lt;"
+      p1.style.display="none";
+    }else{
+	  p2.innerHTML="&gt;&gt;"
+      p1.style.display="block";
+	}
+ }
+ </script>
+ </head>
+ <body>
+ <h2>1<h2>
+  <button onclick="reading()" id="msg">读取报表</button>
+ <h2>2<h2>
+ <div id="a1">我是左边的</div>
+ <div id="a2" onclick="change()">&gt;&gt;</div>
+ <div id="a3">我是右边的</div>
+ </body>
+</html>
